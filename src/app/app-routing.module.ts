@@ -1,27 +1,108 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactusComponent } from './pages/contactus/contactus/contactus.component';
-import { EquipmentsComponent } from './pages/equipments/equipments/equipments.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { DurablepaymentComponent } from './pages/durablepayment/durablepayment.component';
+import { DiagnosticeqpComponent } from './pages/equipments/diagnosticeqp/diagnosticeqp/diagnosticeqp.component';
+import { DurableeqpComponent } from './pages/equipments/durableeqp/durableeqp.component';
+import { MedicaleqpComponent } from './pages/equipments/medicaleqp/medicaleqp.component';
+import { SurgeryeqpComponent } from './pages/equipments/surgeryeqp/surgeryeqp.component';
 import { HomeComponent } from './pages/home/home/home.component';
+import { IcupaymentComponent } from './pages/icupayment/icupayment.component';
+import { LabpaymentComponent } from './pages/labpayment/labpayment.component';
+import { LoginComponent } from './pages/login/login/login.component';
+import { PaymentComponent } from './pages/payment/payment.component';
 import { SignupComponent } from './pages/signup/signup/signup.component';
+import { SinglediagnosticComponent } from './pages/singlediagnostic/singlediagnostic.component';
+import { SingledurableComponent } from './pages/singledurable/singledurable.component';
+import { SingleicuComponent } from './pages/singleicu/singleicu.component';
+import { SinglelaboratoryComponent } from './pages/singlelaboratory/singlelaboratory.component';
 
 const routes: Routes = [
   {
-    path:"home",component:HomeComponent
+    path: '',
+    component: HomeComponent
   },
   {
-    path:"equipments",component:EquipmentsComponent
+    path: 'home',
+    component: HomeComponent
+  },
+  
+  {
+    path: 'contactus',
+    component: ContactusComponent
   },
   {
-    path:"signup",component:SignupComponent
+    path: 'diagnostic',
+    component: DiagnosticeqpComponent
   },
   {
-    path:"contactus",component:ContactusComponent
+    path: 'medical',
+    component: MedicaleqpComponent
+  },
+  {
+    path: 'surgery',
+    component: SurgeryeqpComponent
+  },
+  {
+    path: 'durable',
+    component: DurableeqpComponent
+  },
+  
+  {
+    path:'singlediagnostic/:id',
+    component:SinglediagnosticComponent
+  },
+  {
+    path:'singlelaboratory/:id',
+    component:SinglelaboratoryComponent
+  },
+  {
+    path:'singleicu/:id',
+    component:SingleicuComponent
+  },
+  {
+    path:'singledurable/:id',
+    component:SingledurableComponent
+  },
+  {
+    path: '', redirectTo:'login', pathMatch:'full'
+  },
+  {
+    path: 'dashboard', 
+    component: DashboardComponent
+  },
+  {
+    path: 'signup',
+    component: SignupComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'payment',
+    component: PaymentComponent
+  },
+  {
+   path: 'labpayment',
+   component: LabpaymentComponent
+  },
+  {
+    path: 'icupayment',
+    component: IcupaymentComponent
+  },
+  {
+    path: 'durablepayment',
+    component: DurablepaymentComponent
   }
+
+
+  
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes,{scrollPositionRestoration:'enabled'})],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

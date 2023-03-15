@@ -1,30 +1,37 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">    
+<nav class="navbar navbar-expand-lg" style="background-color:rgb(118, 168, 199);">
+  <div class="container-fluid">   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-      <a class="navbar-brand" href="#">
-        <img src="../../../../assets/images/logo1.jpg"  alt="" width="100" height="50" class="d-inline-block align-text-top">
+      <a class="navbar-brand" style="font-family: 'Times New Roman', Times, serif; font-style:normal; font-size: x-large; font-weight: bolder;">
+     MEDIFY
       </a>
+     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="home" style="font-family:'Times New Roman', Times, serif; font-style:italic; color:royalblue;">Home</a>
+          <a class="nav-link active" aria-current="page" routerLink="home" style="font-family:'Times New Roman', Times, serif;  color:black; font-weight:bold; font-size:large; font-style:normal;">HOME</a>
         </li>
         
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" routerLink="equipments" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family:'Times New Roman', Times, serif; font-style:italic; color:royalblue;">
-          Equipments
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family:'Times New Roman', Times, serif; font-size:large; font-weight:bold; color:black; font-style:normal;">
+          EQUIPMENTS
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#" style="font-family:'Times New Roman', Times, serif; font-style:italic; color:royalblue;">Diagnostic Equipments</a></li>
-            <li><a class="dropdown-item" href="#" style="font-family:'Times New Roman', Times, serif; font-style:italic; color:royalblue;">Medical Equipments</a></li>
-            <li><a class="dropdown-item" href="#" style="font-family:'Times New Roman', Times, serif; font-style:italic; color:royalblue;">Surgery Equipments</a></li>
-            <li><a class="dropdown-item" href="#" style="font-family:'Times New Roman', Times, serif; font-style:italic; color:royalblue;">Durable Equipments</a></li>
+            <li><a class="dropdown-item" routerLink="diagnostic" style="font-family:'Times New Roman', Times, serif; font-size:medium; font-weight:bold;color:black;font-style:normal;">DIAGNOSTIC EQUIPMENTS</a></li>
+            <li><a class="dropdown-item" routerLink="medical" style="font-family:'Times New Roman', Times, serif; font-size:medium;  font-weight:bold;color:black;font-style:normal;">LABORATORY EQUIPMENTS</a></li>
+            <li><a class="dropdown-item" routerLink="surgery" style="font-family:'Times New Roman', Times, serif;font-size:medium;  font-weight:bold;color:black;font-style:normal;">ICU EQUIPMENTS</a></li>
+            <li><a class="dropdown-item" routerLink="durable" style="font-family:'Times New Roman', Times, serif; font-size:medium; font-weight:bold; color:black;font-style:normal;">DURABLE EQUIPMENTS</a></li>
           </ul>
         </li>
+        <div *ngIf="(isLoggedIn$ | async) === false">
         <li class="nav-item">
-          <a class="nav-link" routerLink="signup" style="font-family:'Times New Roman', Times, serif; font-style:italic; color:royalblue;">Sign Up</a>
+          <a class="nav-link" routerLink="signup" style="font-family:'Times New Roman', Times, serif; font-size:large;font-weight:bold; color:black;font-style:normal;">SIGN UP</a>
         </li>
+      </div>
+      <div *ngIf="(isLoggedIn$ | async) === true">
         <li class="nav-item">
-          <a class="nav-link" routerLink="contactus" style="font-family:'Times New Roman', Times, serif; font-style:italic; color:royalblue;">Contact Us</a>
+          <a class="nav-link" style="font-family:'Times New Roman', Times, serif; font-size:large;font-weight:bold; color:black;font-style:normal;" (click)="logout()">LOGOUT</a>
+        </li>
+      </div>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contactus" style="font-family:'Times New Roman', Times, serif; font-size:large; font-weight:bold;color:black;font-style:normal;">CONTACT</a>
         </li>
       </ul>
     </div>

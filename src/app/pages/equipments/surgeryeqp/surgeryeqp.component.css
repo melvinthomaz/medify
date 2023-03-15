@@ -1,0 +1,103 @@
+
+.main:hover{
+  background-color: rgba(19, 1, 1, 0.12);
+  width: 20rem;
+ 
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.cardImg {
+  height: 20rem;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: cornflowerblue;
+  padding: 0.8rem;
+  font-size:large;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color:cornflowerblue;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+ 
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #f0f2f3 40%,  #eaebec 40%);
+}
+
+.card_title {
+  color:cornflowerblue;
+  font-size: 1.1rem;
+  font-weight:bold;
+  font-size: x-large;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+  text-align: center;
+}
+
+.card_text {
+  color: #080808;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight:bold;
+  font-size: large;
+  text-align: center;
+}
+.card_image{
+  width: 100%;
+  height: 40vh;
+  object-fit:cover;
+}

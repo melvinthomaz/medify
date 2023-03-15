@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "medico-7def5": {
+      "hosting": {
+        "medico": [
+          "medico-7def5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "medico-7def5"
+  }
+}

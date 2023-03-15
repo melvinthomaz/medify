@@ -91,6 +91,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "medico:build:production",
+            "firebaseProject": "medico-7def5",
+            "firebaseHostingSite": "medico-7def5"
+          }
         }
       }
     }

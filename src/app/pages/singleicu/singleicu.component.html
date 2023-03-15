@@ -1,0 +1,55 @@
+<section  class="header" style="background: linear-gradient(to bottom right, #c3ced3 40%,  #9aafc2 60%);">
+  <div class="container-center">
+  <div class="single" *ngFor="let item of singleicu">
+      <h1>{{ item.title }}</h1>
+      <br>
+      <div class="container">
+        <div class="row">
+            
+          <div class="col-lg-6">
+            <img src="{{item.image}}" alt="" class="diaImg"/>
+          </div>
+          <div class="col-lg-6">
+            <h3>About This Equipment</h3>
+            <br>
+            <p>{{ item.description }}</p>
+            <br>
+            <h3>USES</h3>
+        <br>
+        <p>{{ item.desc }}</p>
+          </div>
+          </div>
+        </div>
+        
+        <br>
+      <div class="row">
+      <div class="col-lg-6">
+      <iframe width="650" height="350" [src]="item.video  + '?autoplay=1&vq=hd720' | safe" allow="autoplay" allowfullscreen ></iframe>
+    </div>
+    <div class="col-lg-6" style="text-align: justify;">
+      <h3>How it Works</h3>
+      <br>
+      <p>{{ item.detail  }}</p>
+    </div>
+  </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>{{ item.price }}</h2>
+        <button (click)="Btnclick()" type="button" class="btn btn-primary btn-lg">
+          Buy Now
+        </button>
+        <br>
+       
+        <br>
+       
+        <br>
+        
+        <br>
+     
+    </div>
+   </div>
+  </section>
+    

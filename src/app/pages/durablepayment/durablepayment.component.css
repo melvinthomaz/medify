@@ -1,0 +1,28 @@
+.py-5 h2{
+    color: #b2b9f0;
+  }
+
+  .g-5{
+    color:  #000211;
+  }
+
+  .g-5 h3{
+    position: relative;
+    right:75px;
+    color: #010417;
+  }
+
+  .g-5 h5{
+    position: relative;
+    left:63px;
+    color: #010313;
+  }
+  .embed-responsive .card-img-top {
+    width: 100%;
+    height: 47vh;
+
+}
+
+.form-check-label{
+  border-color: cornflowerblue;
+}

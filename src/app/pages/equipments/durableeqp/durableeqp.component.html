@@ -1,0 +1,25 @@
+<section  class="header" style="background-color: rgb(215, 214, 241);">
+<div class="row1">
+    <img src="https://www.narang.com/images/banner/hospital-medical-furniture-banner.jpg" alt="Diagnostic Equipment" width="100%">
+</div>
+<div class="container ">
+  <div class="row">
+    <div class="col-lg-4 pt-4" *ngFor="let item of durable" >
+<div class="main ">
+  <ul class="cards" >
+    <li class="cards_item" style="width: 20rem;">
+      <div class="card">
+        <div class="card_image"><img class="cardImg" src="{{item.image}}"></div>
+        <div class="card_content">
+          <h2 class="card_title">{{item.title}}</h2>
+          <p class="card_text">{{item.price}}</p>
+          <a (click)="gotoHere(item.id)" class="btn card_btn">View Equipment</a>
+        </div>
+      </div>
+    </li>
+   </ul>
+   </div>
+    </div>
+  </div>
+</div>
+</section>
