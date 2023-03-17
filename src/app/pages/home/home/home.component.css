@@ -41,6 +41,7 @@
   }
    .marker{
     list-style-position:inside;
+    
    
   }
  
@@ -51,10 +52,10 @@
     margin-left: 30px;
   }
 
-  .card:hover{
+  /* .card:hover{
     opacity: 0.8;
     cursor: pointer;
-  }
+  } */
   marquee{
     font-size: 25px;
     font-weight: 800;
