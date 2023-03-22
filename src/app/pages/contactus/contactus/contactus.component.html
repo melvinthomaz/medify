@@ -17,17 +17,19 @@
               type="email"
               class="form-control"
               id="email"
-              aria-describedby="emailHelp"
+              name="email"
+               [(ngModel)]="email"
             />
           </div>
           <div class="mb-3">
             <label for="msg" class="form-label" style="color: white;">Message</label>
             <textarea 
               class="form-control" style="height:7rem;"
-              aria-label="With textarea"
+              name="message"
+               [(ngModel)]="message"
             ></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary" (click)="contactus()">Submit</button>
         </form>
       </div>
       <div class="col-lg-6">

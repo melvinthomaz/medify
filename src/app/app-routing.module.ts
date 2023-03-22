@@ -7,6 +7,7 @@ import { DiagnosticeqpComponent } from './pages/equipments/diagnosticeqp/diagnos
 import { DurableeqpComponent } from './pages/equipments/durableeqp/durableeqp.component';
 import { MedicaleqpComponent } from './pages/equipments/medicaleqp/medicaleqp.component';
 import { SurgeryeqpComponent } from './pages/equipments/surgeryeqp/surgeryeqp.component';
+import { ForgotPasswordComponent } from './pages/forgotpassword/forgotpassword.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { IcupaymentComponent } from './pages/icupayment/icupayment.component';
 import { LabpaymentComponent } from './pages/labpayment/labpayment.component';
@@ -17,6 +18,8 @@ import { SinglediagnosticComponent } from './pages/singlediagnostic/singlediagno
 import { SingledurableComponent } from './pages/singledurable/singledurable.component';
 import { SingleicuComponent } from './pages/singleicu/singleicu.component';
 import { SinglelaboratoryComponent } from './pages/singlelaboratory/singlelaboratory.component';
+import { VerifyemailComponent } from './pages/verifyemail/verifyemail.component';
+
 
 const routes: Routes = [
   {
@@ -95,6 +98,14 @@ const routes: Routes = [
   {
     path: 'durablepayment',
     component: DurablepaymentComponent
+  },
+  {
+    path:'forgotpassword',
+    component:ForgotPasswordComponent
+  },
+  {
+    path:'verifyemail',
+    component:VerifyemailComponent
   }
 
 

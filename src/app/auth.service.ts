@@ -5,6 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 import { Firestore,doc,getDoc } from '@angular/fire/firestore';
 
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -79,4 +80,22 @@ export class AuthService {
       console.log(error)
   }
   }
+  forgotPassword(email : string) {
+    this.fireauth.sendPasswordResetEmail(email).then(() => {
+      this.router.navigate(['/varify-email']);
+    }, err => {
+      alert('Something went wrong');
+    })
 }
+
+sendEmailForVarification(user : any) {
+  console.log(user);
+  user.sendEmailVerification().then((res : any) => {
+    this.router.navigate(['/varify-email']);
+  }, (err : any) => {
+    alert('Something went wrong. Not able to send mail to your email.')
+  })
+}
+}
+
+

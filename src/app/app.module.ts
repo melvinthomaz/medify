@@ -30,6 +30,8 @@ import { PaymentComponent } from './pages/payment/payment.component';
 import { LabpaymentComponent } from './pages/labpayment/labpayment.component';
 import { IcupaymentComponent } from './pages/icupayment/icupayment.component';
 import { DurablepaymentComponent } from './pages/durablepayment/durablepayment.component';
+import { ForgotPasswordComponent } from './pages/forgotpassword/forgotpassword.component';
+import { VerifyemailComponent } from './pages/verifyemail/verifyemail.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { DurablepaymentComponent } from './pages/durablepayment/durablepayment.c
     PaymentComponent,
     LabpaymentComponent,
     IcupaymentComponent,
-    DurablepaymentComponent
+    DurablepaymentComponent,
+    ForgotPasswordComponent,
+    VerifyemailComponent
   ],
   imports: [
     BrowserModule,

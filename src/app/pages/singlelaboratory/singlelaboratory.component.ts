@@ -18,7 +18,7 @@ export class SinglelaboratoryComponent {
     let singleDataArray = this.hero.getLaboratory();
     this.singlelaboratory = singleDataArray.filter((d) =>d.id === num);
     console.log(this.singlelaboratory);
-  }
+}
 Btnclick(){
   this.router.navigateByUrl('labpayment');
 }
