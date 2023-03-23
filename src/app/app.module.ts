@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home/home.component';
 import { SignupComponent } from './pages/signup/signup/signup.component';
-import { ContactusComponent } from './pages/contactus/contactus/contactus.component';
+import { ContactUsComponent } from './pages/contactus/contactus/contactus.component';
 import { NavbarComponent } from './util/navbar/navbar/navbar.component';
 import { FooterComponent } from './util/footer/footer/footer.component';
 import { EquipmentsComponent } from './pages/equipments/equipments/equipments.component';
@@ -38,7 +38,7 @@ import { VerifyemailComponent } from './pages/verifyemail/verifyemail.component'
     AppComponent,
     HomeComponent,
     SignupComponent,
-    ContactusComponent,
+    ContactUsComponent,
     NavbarComponent,
     FooterComponent,
     EquipmentsComponent,

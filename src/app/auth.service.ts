@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { Firestore,doc,getDoc } from '@angular/fire/firestore';
+import { Firestore,doc,getDoc,addDoc,collection } from '@angular/fire/firestore';
+import Swal from 'sweetalert2';
 
 
 
@@ -96,6 +97,30 @@ sendEmailForVarification(user : any) {
     alert('Something went wrong. Not able to send mail to your email.')
   })
 }
+
+//contact us
+contactus(email:string, message:string){
+  let data={
+    email:email,
+    message:message
+  }
+  const docRef = collection(this.firestore, 'contactus')
+  addDoc(docRef, data)
+  .then(() => {
+    console.log('Data added successfully');
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Message send successfully...',
+      background: '#212529',
+      showConfirmButton: false,
+      timer: 2000,
+    });
+  })
+  .catch((err) => {
+    
+    console.log(err);
+});
 }
 
-
+}

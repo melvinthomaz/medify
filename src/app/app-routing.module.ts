@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactusComponent } from './pages/contactus/contactus/contactus.component';
+import { ContactUsComponent } from './pages/contactus/contactus/contactus.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DurablepaymentComponent } from './pages/durablepayment/durablepayment.component';
 import { DiagnosticeqpComponent } from './pages/equipments/diagnosticeqp/diagnosticeqp/diagnosticeqp.component';
@@ -33,7 +33,7 @@ const routes: Routes = [
   
   {
     path: 'contactus',
-    component: ContactusComponent
+    component: ContactUsComponent
   },
   {
     path: 'diagnostic',
