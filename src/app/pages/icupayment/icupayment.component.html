@@ -229,8 +229,8 @@
                             type="text"
                             class="form-control"
                             id="cc-name"
-                            placeholder=""
-                            required
+                            name="ncard"
+                            [(ngModel)]="name"
                           />
                           <small class="text-muted">Full name as displayed on card</small>
                           <div class="invalid-feedback">Name on card is required</div>
@@ -244,8 +244,8 @@
                             type="text"
                             class="form-control"
                             id="cc-number"
-                            placeholder=""
-                            required
+                            name="dcardnumber"
+                            [(ngModel)]="cardnumber"
                           />
                           <div class="invalid-feedback">Credit card number is required</div>
                         </div>
@@ -256,8 +256,8 @@
                             type="text"
                             class="form-control"
                             id="cc-expiration"
-                            placeholder=""
-                            required
+                            name="expire"
+                            [(ngModel)]="expiration"
                           />
                           <div class="invalid-feedback">Expiration date required</div>
                         </div>
@@ -268,8 +268,8 @@
                             type="text"
                             class="form-control"
                             id="cc-cvv"
-                            placeholder=""
-                            required
+                            name="cvvnumber"
+                            [(ngModel)]="cvv"
                           />
                           <div class="invalid-feedback">Security code required</div>
                         </div>
@@ -277,7 +277,7 @@
             
                       <hr class="my-4" />
             
-                      <button class="w-50 btn btn-primary btn-lg" style="left: 12rem; position: relative;" type="submit">
+                      <button class="w-50 btn btn-primary btn-lg" style="left: 12rem; position: relative;" type="submit" (click)="payNow()">
                         Pay Now
                       </button>
                     </form>

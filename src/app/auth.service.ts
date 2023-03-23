@@ -122,5 +122,16 @@ contactus(email:string, message:string){
     console.log(err);
 });
 }
+payNow(name:string,cardnumber:string,expiration:string,cvv:string)
+  {
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Payment Done Successfully...',
+      background: '#212529',
+      showConfirmButton: false,
+      timer: 2000,
+    });
 
+  }
 }
