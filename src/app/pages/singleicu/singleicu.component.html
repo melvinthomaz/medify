@@ -38,9 +38,25 @@
         <br>
         <br>
         <h2>{{ item.price }}</h2>
-        <button (click)="Btnclick()" type="button" class="btn btn-primary btn-lg">
-          Buy Now
-        </button>
+        <div *ngIf="(isLoggedIn$ | async) === true">
+          <button
+            (click)="Btnpayment()"
+            type="button"
+            class="btn btn-primary glow-button"
+          >
+            Buy Now
+          </button>
+        </div>
+  
+        <div *ngIf="(isLoggedIn$ | async) === false">
+          <button
+            (click)="Btnsignup()"
+            type="button"
+            class="btn btn-primary glow-button"
+          >
+            Buy Now
+          </button>
+        </div>
         <br>
        
         <br>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HeroService } from 'src/app/hero.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/auth.service';
 @Component({
   selector: 'app-singledurable',
   templateUrl: './singledurable.component.html',
@@ -8,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class SingledurableComponent {
   singledurable: any;
-  constructor(private hero: HeroService, private router: Router) {}
+
+  isLoggedIn$: Observable<boolean> | undefined;
+  constructor(private hero: HeroService, private router: Router,private auth: AuthService) {}
 
   ngOnInit(): void {
     let pageid = localStorage.getItem('id');
@@ -17,8 +21,13 @@ export class SingledurableComponent {
     let singleDataArray = this.hero.getStrectcher();
     this.singledurable = singleDataArray.filter((d) =>d.id === num);
     console.log(this.singledurable);
+
+    this.isLoggedIn$ = this.auth.isLoggedIn;
   }
-Btnclick(){
+Btnpayment(){
   this.router.navigateByUrl('durablepayment');
+}
+Btnsignup(){
+  this.router.navigateByUrl('signup');
 }
 }
